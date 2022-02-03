@@ -1,10 +1,10 @@
 <template>
-  <button>Prox</button>
+  <button>{{ pokemon }}</button>
 </template>
 
 <script>
 export default {
-
+  props: ['pokemon']
 }
 </script>
 

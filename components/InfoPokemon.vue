@@ -1,10 +1,10 @@
 <template>
-  <h1>export</h1>
+  <h1>{{ pokemon }}</h1>
 </template>
 
 <script>
 export default {
-
+  props: ['pokemon']
 }
 </script>
 

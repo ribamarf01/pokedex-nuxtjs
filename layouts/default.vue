@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-gray-200">
-    <Nav />
-    <Nuxt />
+  <div class="">
+    <Nav class="" />
+    <Nuxt class="" />
   </div>
 </template>
 

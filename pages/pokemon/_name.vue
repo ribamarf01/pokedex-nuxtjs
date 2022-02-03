@@ -1,8 +1,8 @@
 <template>
   <div class="">
-    <PreviousPokemon />
-    <InfoPokemon />
-    <NextPokemon />
+    <PreviousPokemon :pokemon="prev.name" />
+    <InfoPokemon :pokemon="actual.name"/>
+    <NextPokemon :pokemon="next.name" />
   </div>
 </template>
 
