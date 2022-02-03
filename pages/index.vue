@@ -18,9 +18,7 @@
 <script> 
 import PokemonCard from "../components/PokemonCard.vue";
 import Spinner from "../components/Spinner.vue";
-
 import { mapGetters, mapActions } from 'vuex'
-
 export default {  
     name: "index",
     components: { PokemonCard, Spinner },
@@ -31,7 +29,6 @@ export default {
       loadMorePokemons() {
         window.onscroll = () => {
           let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
-
           if (bottomOfWindow) {
             this.loadApi()
           }
@@ -39,11 +36,9 @@ export default {
       },
       ...mapActions("pokemonStore", { loadApi: "fetchList" })
     },
-    beforeMount() {
-      this.loadApi()
-    },
     mounted() {
-      //this.loadMorePokemons()
+      this.loadApi()
+      this.loadMorePokemons()
     }
 }
 </script>

@@ -13,7 +13,7 @@ export const mutations = {
     },
     SET_INDEX_ENDPOINT_VALUES: state => {
         state.index = state.endpoint + 1
-        state.endpoint = state.endpoint+20
+        state.endpoint = state.endpoint + 20
     },
     CHANGE_LOADED_STATE: (state, value) => state.loaded = value
 }
