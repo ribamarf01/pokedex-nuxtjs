@@ -20,7 +20,6 @@ module.exports = {
         steel: '#b2b1c1',
         ice: '#79d8f5',
         ghost: '#5c5da8'
-
       }
     }
   },

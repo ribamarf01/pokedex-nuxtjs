@@ -1,8 +1,8 @@
 <template>
-  <div class="">
-    <PreviousPokemon :pokemon="prev.name" />
+  <div class="flex justify-between">
+    <PreviousPokemon :id="prev.id" :pokemon="prev.name" />
     <InfoPokemon :pokemon="actual.name"/>
-    <NextPokemon :pokemon="next.name" />
+    <NextPokemon :id="next.id" :pokemon="next.name" />
   </div>
 </template>
 
