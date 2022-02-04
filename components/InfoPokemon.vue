@@ -13,7 +13,7 @@
         <span v-if="!ability.is_hidden" class="capitalize">{{ ability.ability.name | removeMinus }}</span>
         <span v-else class="text-gray-600 capitalize">
           {{ ability.ability.name | removeMinus }}
-          <span class="text-red-600">*</span>
+          <abbr title="Hidden Ability" class="text-red-600">*</abbr>
         </span>
       </div>
     </div>

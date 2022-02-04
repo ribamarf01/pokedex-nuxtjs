@@ -3,7 +3,7 @@ export const state = () => {
         actual: {},
         next: {},
         previous: {},
-        exists: false
+        exists: true
     }
 }
 
