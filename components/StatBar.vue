@@ -19,10 +19,10 @@ export default {
 	},
 	methods: {
 		widthStyling() { // Max value 200
-			this.width = `width: ${this.value / 2}%`;
+			this.width = (this.value / 2) > 3 ?`width: ${this.value / 2}%` : `width: 3%`
 		}
 	},
-	beforeCreate() {
+	created() {
 		this.widthStyling()
 	}
 }
