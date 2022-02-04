@@ -1,7 +1,7 @@
 <template>
   <div class="mt-12">
     <PokemonNotFound v-if="!exists" />
-    <div v-else class="flex justify-around items-center">
+    <div  class="flex justify-around items-center">
       <PreviousPokemon :id="prev.id" :pokemon="prev.name" />
       <InfoPokemon 
         :pokemon="actual"

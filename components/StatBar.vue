@@ -13,7 +13,9 @@
 export default {
 	props: ['value', 'stat', 'abbr'],
 	data: () => {
-		width: ""
+		return {
+			width: ""
+		}
 	},
 	methods: {
 		widthStyling() { // Max value 200

@@ -3,7 +3,7 @@ export const state = () => {
         pokemonList: [],
         index: 1,
         endpoint: 20,
-        loaded: false
+        loaded: true
     }
 }
 
