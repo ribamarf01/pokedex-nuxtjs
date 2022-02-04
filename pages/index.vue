@@ -21,6 +21,11 @@ import Spinner from "../components/Spinner.vue";
 import { mapGetters, mapActions } from 'vuex'
 export default {  
     name: "index",
+    head() {
+      return {
+        title: "Nuxt Pokedex!"
+      }
+    },
     components: { PokemonCard, Spinner },
     computed: {
       ...mapGetters("pokemonStore", { pokemonList: "GET_LIST", loaded: "GET_LOADED_STATE" })

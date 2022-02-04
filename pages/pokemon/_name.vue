@@ -13,17 +13,26 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+
 import InfoPokemon from '../../components/InfoPokemon.vue'
 import PreviousPokemon from '../../components/PreviousPokemon.vue'
 import NextPokemon from '../../components/NextPokemon.vue'
 import PokemonNotFound from '../../components/PokemonNotFound.vue'
 
 export default {
+  head() {
+    return {
+      title: `${this.capitalize(this.$route.params.name)} | Pokedex`
+    }
+  },
   components: { InfoPokemon, PreviousPokemon, NextPokemon, PokemonNotFound },
   computed: {
     ...mapGetters("individualPokemonStore", { exists: "EXISTS", actual: "GET_ACTUAL", next: "GET_NEXT", prev: "GET_PREVIOUS" })
   },
   methods: {
+     capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1)
+    },
     ...mapActions("individualPokemonStore", { loadApi: "fetchApi" })
   },
   created() {
