@@ -44,6 +44,9 @@ module.exports = {
       `pages/**/*.vue`,
       `plugins/**/*.{js,ts}`,
       `nuxt.config.{js,ts}`
-    ]
+    ],
+    options: {
+      safelist: [/^bg-/, /^text-/, /^border-/]
+    }
   }
 }

@@ -22,7 +22,7 @@ export default {
 			this.width = `width: ${this.value / 2}%`;
 		}
 	},
-	created() {
+	beforeCreate() {
 		this.widthStyling()
 	}
 }

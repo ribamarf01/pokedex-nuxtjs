@@ -34,11 +34,12 @@ export default {
   ],
 
   tailwindcss: {
-    cssPath: '~/assets/css/colors.css',
+    cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config.js',
     exposeConfig: false,
     config: {},
     injectPosition: 0,
+    viewer: false
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
