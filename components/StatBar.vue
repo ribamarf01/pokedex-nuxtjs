@@ -2,7 +2,7 @@
 	<div class="w-full mb-2 flex items-center">
 		<span class="mx-3 w-1/6 capitalize">{{ stat }} </span>
 		<div class="w-5/6 rounded-xl" :class="'bg-' + abbr + '_fade'">
-			<div class="rounded-xl text-center" :style="width" :class="'bg-'+ abbr">
+			<div class="rounded-xl text-center" v-bind:style="widthStyling()" :class="'bg-'+ abbr">
 				<span class="text-gray-100">{{ value }}</span>
 			</div>
 		</div>
@@ -12,19 +12,12 @@
 <script>
 export default {
 	props: ['value', 'stat', 'abbr'],
-	data: () => {
-		return {
-			width: ""
-		}
-	},
 	methods: {
-		widthStyling() { // Max value 200
-			this.width = (this.value / 2) > 3 ?`width: ${this.value / 2}%` : `width: 3%`
+		widthStyling() {
+			return (this.value / 2) > 3 ? `width: ${this.value / 2}%` : `width: 3%`
 		}
-	},
-	created() {
-		this.widthStyling()
 	}
+	
 }
 </script>
 
