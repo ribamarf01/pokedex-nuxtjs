@@ -7,6 +7,10 @@
       <span class="mx-2 border-2 rounded-3xl w-1/4 text-center capitalize" :class="'border-'+ pokemon.types[0].type.name">{{ pokemon.types[0].type.name }}</span>
       <span v-if="pokemon.types[1] !== undefined" class="mx-2 border-2 rounded-3xl w-1/4 text-center capitalize" :class="'border-' + pokemon.types[1].type.name">{{ pokemon.types[1].type.name }}</span>
     </div>
+    <div v-if="species" class="text-center my-2">
+      <p class="text-lg" v-if="!(species.genera[7] == undefined)">{{ species.genera[7].genus }}</p>
+      <p v-if="!(species.flavor_text_entries[0] == undefined)">{{ species.flavor_text_entries[0].flavor_text }}</p>
+    </div>
     <h1 class="text-center text-xl">Abilities: </h1>
     <div class="flex justify-around my-2" v-if="pokemon.abilities">
       <div v-for="ability in pokemon.abilities" :key="ability.ability.name">
@@ -22,7 +26,7 @@
       <span class="text-md">Height: {{ pokemon.height | formatString }}m </span>
       <span class="text-md">Weight: {{ pokemon.weight | formatString }}kg</span>
     </div>
-    <h1 class="text-center text-xl my-2">Status: </h1>
+    <h1 class="text-center text-xl my-2">Stats: </h1>
     <div v-if="pokemon.stats">
       <Stats 
         :hp="pokemon.stats[0].base_stat"
@@ -39,7 +43,7 @@
 <script>
 import Stats from "./Stats.vue"
 export default {
-    props: ["pokemon"],
+    props: ["pokemon", "species"],
     filters: {
         formatString: str => {
             str = String(str);
@@ -49,7 +53,15 @@ export default {
             return str.split("-").reduce((accumulator, word) => accumulator += ` ${word}`, "");
         }
     },
-    components: { Stats }
+    components: { Stats },
+    methods: {
+      test() {
+        console.log(this.species)
+      }
+    },
+    mounted() {
+      this.test()
+    }
 }
 </script>
 

@@ -5,6 +5,7 @@
       <PreviousPokemon :id="prev.id" :pokemon="prev.name" />
       <InfoPokemon 
         :pokemon="actual"
+        :species="species"
       />
       <NextPokemon :id="next.id" :pokemon="next.name" />
     </div>
@@ -27,7 +28,7 @@ export default {
   },
   components: { InfoPokemon, PreviousPokemon, NextPokemon, PokemonNotFound },
   computed: {
-    ...mapGetters("individualPokemonStore", { exists: "EXISTS", actual: "GET_ACTUAL", next: "GET_NEXT", prev: "GET_PREVIOUS" })
+    ...mapGetters("individualPokemonStore", { exists: "EXISTS", actual: "GET_ACTUAL", next: "GET_NEXT", prev: "GET_PREVIOUS", species: "GET_SPECIES" })
   },
   methods: {
      capitalize(str) {
