@@ -39,3 +39,7 @@ You can also use yarn!
 <img src="./github/images/img1.png" alt="project image 1">
 <img src="./github/images/img2.png" alt="project image 2">
 <img src="./github/images/img3.png" alt="project image 3">
+
+## 👽 External links
+
+- 🔗 PokeApi: https://pokeapi.co/
