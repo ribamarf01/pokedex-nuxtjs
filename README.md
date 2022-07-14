@@ -3,7 +3,7 @@
 ## 👀 Project Overview 
 
 - 😎 A small app thats use the PokeAPI to show some pokemon information 
-- 🔗 You can find this project live on: https://pokedex-nuxtjs.vercel.app
+- 🔗 You can find this project live on: https://pokedex.ribamarf01.dev
 
 ## 🔥 Techs used
 
